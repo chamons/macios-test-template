@@ -110,7 +110,7 @@ namespace Xamarin.Tests.Templating
 					break;
 				}
 
-				throw new NotImplementedException ();
+				throw new NotImplementedException ($"Language: ${Language} Flavor: ${Flavor}");
 			}
 		}
 	}

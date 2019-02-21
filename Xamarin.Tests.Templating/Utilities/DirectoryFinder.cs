@@ -25,7 +25,7 @@ namespace Xamarin.Tests.Templating
 			UriBuilder uri = new UriBuilder (codeBase);
 			string path = Uri.UnescapeDataString (uri.Path);
 			string assemblyDirectory = Path.GetDirectoryName (path);
-			return Path.Combine (assemblyDirectory, FindTestDirectory + "common/mac");
+			return Path.Combine (FindTestDirectory, "common", "mac");
 		}
 #else
 		public static string FindSourceDirectory ()
