@@ -29,7 +29,7 @@ namespace TestCase
 		}
 	}
 }";
-			FileTemplateEngine templateEngine = CreateEngine (outputDirectory);
+			FileCopier templateEngine = CreateEngine (outputDirectory);
 
 			ReplacementGroup replacements = ReplacementGroup.Create (Replacement.Create ("%CODE%", fileSubstitutions.TestCode), Replacement.Create ("%DECL%", fileSubstitutions.TestDecl));
 			templateEngine.CopyTextWithSubstitutions (TestCode, TemplateInfo.SourceName, replacements);

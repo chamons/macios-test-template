@@ -16,7 +16,7 @@ namespace Xamarin.Tests.Templating
 		public string Generate (string outputDirectory, ProjectSubstitutions projectSubstitutions, FileSubstitutions fileSubstitutions, PListSubstitutions plistReplacements = null, bool includeAssets = false)
 		{
 			plistReplacements = plistReplacements ?? PListSubstitutions.None;
-			FileTemplateEngine templateEngine = CreateEngine (outputDirectory);
+			FileCopier templateEngine = CreateEngine (outputDirectory);
 
 			if (includeAssets) {
 				templateEngine.CopyDirectory ("Icons/Assets.xcassets");

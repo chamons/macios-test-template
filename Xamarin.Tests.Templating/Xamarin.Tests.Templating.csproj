@@ -35,7 +35,7 @@
     <Folder Include="External\" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FileTemplateEngine.cs" />
+    <Compile Include="FileCopier.cs" />
     <Compile Include="Utilities\DirectoryFinder.cs" />
     <Compile Include="Generator\TemplateInfo.cs" />
     <Compile Include="Replacements.cs" />

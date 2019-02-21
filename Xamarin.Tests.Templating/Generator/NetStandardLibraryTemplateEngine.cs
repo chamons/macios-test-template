@@ -15,11 +15,11 @@ namespace Xamarin.Tests.Templating
 		{
 			Directory.CreateDirectory (Path.Combine (outputDirectory, NetStandardSubDir));
 
-			FileTemplateEngine templateEngine = CreateEngine (outputDirectory);
+			FileCopier templateEngine = CreateEngine (outputDirectory);
 			templateEngine.CopyFile (TemplateInfo.SourceName);
 			return templateEngine.CopyFile (TemplateInfo.ProjectName);
 		}
 
-		protected override FileTemplateEngine CreateEngine (string outputDirectory) => FileTemplateEngine.WithSubdirectory (DirectoryFinder.FindSourceDirectory (), outputDirectory, NetStandardSubDir);
+		protected override FileCopier CreateEngine (string outputDirectory) => FileCopier.WithSubdirectory (DirectoryFinder.FindSourceDirectory (), outputDirectory, NetStandardSubDir);
 	}
 }

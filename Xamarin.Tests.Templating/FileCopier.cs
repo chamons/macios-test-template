@@ -3,20 +3,20 @@ using System.IO;
 
 namespace Xamarin.Tests.Templating
 {
-	public class FileTemplateEngine
+	public class FileCopier
 	{
 		string SourceDirectory;
 		string OutputDirectory;
 
-		public FileTemplateEngine (string sourceDirectory, string outputDirectory)
+		public FileCopier (string sourceDirectory, string outputDirectory)
 		{
 			SourceDirectory = sourceDirectory;
 			OutputDirectory = outputDirectory;
 		}
 
-		public static FileTemplateEngine WithSubdirectory (string sourceDirectory, string outputDirectory, string subDirectory)
+		public static FileCopier WithSubdirectory (string sourceDirectory, string outputDirectory, string subDirectory)
 		{
-			return new FileTemplateEngine (Path.Combine (sourceDirectory, subDirectory), Path.Combine (outputDirectory, subDirectory));
+			return new FileCopier (Path.Combine (sourceDirectory, subDirectory), Path.Combine (outputDirectory, subDirectory));
 		}
 
 		public string CopyFile (string fileName, string destFileName = null)
