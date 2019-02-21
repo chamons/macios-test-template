@@ -1,7 +1,7 @@
 
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "test-template-mac", "test-template-mac.csproj", "{A19E7BA3-FB49-480B-9C8A-07A1DA5D5EB4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "msbuild-test-templating", "msbuild-test-templating.csproj", "{A19E7BA3-FB49-480B-9C8A-07A1DA5D5EB4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
