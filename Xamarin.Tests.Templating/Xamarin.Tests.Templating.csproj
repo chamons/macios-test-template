@@ -6,7 +6,7 @@
     <ProjectGuid>{A19E7BA3-FB49-480B-9C8A-07A1DA5D5EB4}</ProjectGuid>
     <OutputType>Library</OutputType>
     <RootNamespace>Xamarin.Tests.Templating</RootNamespace>
-    <AssemblyName>msbuild-test-templating</AssemblyName>
+    <AssemblyName>Xamarin.Tests.Templating</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">

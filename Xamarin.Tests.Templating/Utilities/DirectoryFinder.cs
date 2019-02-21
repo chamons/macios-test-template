@@ -6,7 +6,8 @@ namespace Xamarin.Tests.Templating
 {
 	static class DirectoryFinder
 	{
-		public static string FindRootDirectory ()
+#if INSIDE_MACIOS
+		static string FindRootDirectory ()
 		{
 			var current = Assembly.GetExecutingAssembly ().Location;
 			while (!Directory.Exists (Path.Combine (current, "_mac-build")) && current.Length > 1)
@@ -16,7 +17,7 @@ namespace Xamarin.Tests.Templating
 			return Path.GetFullPath (Path.Combine (current, "_mac-build"));
 		}
 
-		public static string FindTestDirectory => Path.Combine (FindRootDirectory (), "..", "tests") + "/";
+		static string FindTestDirectory => Path.Combine (FindRootDirectory (), "..", "tests") + "/";
 
 		public static string FindSourceDirectory ()
 		{
@@ -26,5 +27,14 @@ namespace Xamarin.Tests.Templating
 			string assemblyDirectory = Path.GetDirectoryName (path);
 			return Path.Combine (assemblyDirectory, FindTestDirectory + "common/mac");
 		}
+#else
+		public static string FindSourceDirectory ()
+		{
+			string codeBase = Assembly.GetExecutingAssembly ().CodeBase;
+			UriBuilder uri = new UriBuilder (codeBase);
+			string path = Uri.UnescapeDataString (uri.Path);
+			return Path.Combine (path, "../../../../Resources/");
+		}
+#endif
 	}
 }
