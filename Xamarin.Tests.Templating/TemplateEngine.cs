@@ -70,6 +70,6 @@ namespace Xamarin.Tests
 			return group;
 		}
 
-		protected virtual FileTemplateEngine CreateEngine (string outputDirectory) => new FileTemplateEngine (DirectoryFinder.FindSourceDirectory (), outputDirectory);
+		protected virtual FileCopier CreateEngine (string outputDirectory) => new FileCopier (DirectoryFinder.FindSourceDirectory (), outputDirectory);
 	}
 }
