@@ -37,7 +37,6 @@
   <ItemGroup>
     <Compile Include="FileTemplateEngine.cs" />
     <Compile Include="Utilities\DirectoryFinder.cs" />
-    <Compile Include="Generator\TemplateEngine.cs" />
     <Compile Include="Generator\TemplateInfo.cs" />
     <Compile Include="Replacements.cs" />
     <Compile Include="Generator\NetStandardLibraryTemplateEngine.cs" />
@@ -49,6 +48,7 @@
     <Compile Include="Generator\MacLibraryTemplateEngine.cs" />
     <Compile Include="Generator\MacSystemMonoTemplateEngine.cs" />
     <Compile Include="Generator\MacClassicAppTemplateEngine.cs" />
+    <Compile Include="TemplateEngine.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

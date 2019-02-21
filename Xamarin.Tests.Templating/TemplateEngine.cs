@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using Xamarin.Tests.Templating;
 
-namespace Xamarin.Tests.Templating
+namespace Xamarin.Tests
 {
 	public enum ProjectLanguage { None, CSharp, FSharp }
 	public enum ProjectPlatform { None, macOS }
