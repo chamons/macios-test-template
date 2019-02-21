@@ -29,14 +29,15 @@ This project is a prototype for an alternative that could be shared and more eas
 ### Example
 
 ```csharp
-			var tmpDir = Cache.CreateTemporaryDirectory ();
+var tmpDir = Cache.CreateTemporaryDirectory ();
 
-			var engine = new MacAppTemplateEngine (ProjectFlavor.FullXM, ProjectLanguage.CSharp);
-			var fileSubstitutions = new FileSubstitutions { TestCode = "System.Console.WriteLine (typeof (int));" };
-			var projectSubstitutions = new ProjectSubstitutions {
-				References = "<Reference Include=\"System.Net.Http\" />",
-			};
-			string projectPath = engine.Generate (tmpDir, projectSubstitutions, fileSubstitutions);
-			ProjectBuilder.BuildProject (projectPath, "/"); /* Use system XM instead of _mac-build today */
+var engine = new MacAppTemplateEngine (ProjectFlavor.FullXM, ProjectLanguage.CSharp);
+var fileSubstitutions = new FileSubstitutions { TestCode = "System.Console.WriteLine (typeof (int));" };
+var projectSubstitutions = new ProjectSubstitutions {
+	References = "<Reference Include=\"System.Net.Http\" />",
+};
+
+string projectPath = engine.Generate (tmpDir, projectSubstitutions, fileSubstitutions);
+ProjectBuilder.BuildProject (projectPath, "/"); /* Use system XM instead of _mac-build today */
 ```
 
